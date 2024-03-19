@@ -1,0 +1,19 @@
+package entities;
+
+public class Triangle {
+	public double a;
+	public double b;
+	public double c;
+	public double perimeter;
+	public double area;
+	
+	public double calculatePerimeter() {
+		return perimeter = a + b + c;
+	}
+	
+	public double calculateAreaOfTheTriangle() {
+		double semiPerimeter = perimeter / 2;
+		area = Math.sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
+		return area;
+	}
+}

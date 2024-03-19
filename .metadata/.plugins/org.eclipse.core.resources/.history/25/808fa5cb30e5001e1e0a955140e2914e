@@ -1,0 +1,13 @@
+package curso;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		char unicode = '\u0061';
+
+		System.out.println(unicode);
+		
+	}
+
+}

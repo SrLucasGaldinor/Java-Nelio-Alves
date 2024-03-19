@@ -1,0 +1,26 @@
+package entities;
+
+public class Triangle {
+	public double a;
+	public double b;
+	public double c;
+	public double perimeter;
+	public double area;
+
+	public void calculatePerimeter() {
+		perimeter = a + b + c;
+	}
+
+	public void calculateAreaOfTheTriangle() {
+		double semiPerimeter = perimeter / 2.0;
+		area = Math.sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
+		System.out.println(area);
+		validationArea();
+	}
+	
+	public void validationArea() {
+		if (Double.isNaN(area)) {
+			area = 0.0;
+		}
+	}
+}
