@@ -1,0 +1,9 @@
+package services;
+
+public class CurrencyConverter {
+	public static double converterDollar(double dollarQuantity, double dollarPrice) {
+		double valueAux = dollarQuantity * dollarPrice;
+		double valueIOF = valueAux * 0.06;
+		return valueAux + valueIOF;
+	}
+}

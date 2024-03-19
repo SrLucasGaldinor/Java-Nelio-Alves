@@ -86,8 +86,6 @@ public class Main {
 	}
 
 	public static void atividadeVI() {
-		
-		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("What's the dollar price?");
@@ -96,9 +94,9 @@ public class Main {
 		System.out.println("How many dollars will be bought?");
 		double dollar = sc.nextDouble();
 		
-		double totalValue = CurrencyConverter.converterDollar(dollar, dollarPrice);
+		double value = CurrencyConverter.converterDollar(dollar, dollarPrice);
 		
-		System.out.printf("Amount to be paid in reais: %.2f%n", totalValue);
+		System.out.printf("Amount to be paid in reais: %.2f%n", value);
 		
 	}
 }

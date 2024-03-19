@@ -4,7 +4,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Triangle;
-import services.CurrencyConverter;
 import services.Show;
 
 public class Main {
@@ -12,8 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 //		atividadesI();
 //		atividadeII();
-//		atividadeIII();
-		atividadeVI();
+		atividadeIII();
 	}
 
 	public static void atividadesI() {
@@ -85,20 +83,4 @@ public class Main {
 		sc.close();
 	}
 
-	public static void atividadeVI() {
-		
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("What's the dollar price?");
-		double dollarPrice = sc.nextDouble();
-		
-		System.out.println("How many dollars will be bought?");
-		double dollar = sc.nextDouble();
-		
-		double totalValue = CurrencyConverter.converterDollar(dollar, dollarPrice);
-		
-		System.out.printf("Amount to be paid in reais: %.2f%n", totalValue);
-		
-	}
 }

@@ -1,0 +1,55 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno {
+	private String name;
+	private double firstTri;
+	private double secondTri;
+	private double thirdTri;
+
+	List<Aluno> listaDeAlunos = new ArrayList();
+
+	public void adicionarAluno(Aluno aluno) {
+		Aluno alunoAux = new Aluno();
+		alunoAux.setName(aluno.getName());
+		listaDeAlunos.add(alunoAux);
+		for (int x = 0; x < listaDeAlunos.size(); x++) {
+			System.out.println(listaDeAlunos.get(x).getName());
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getFirstTri() {
+		return firstTri;
+	}
+
+	public void setFirstTri(double firstTri) {
+		this.firstTri = firstTri;
+	}
+
+	public double getSecondTri() {
+		return secondTri;
+	}
+
+	public void setSecondTri(double secondTri) {
+		this.secondTri = secondTri;
+	}
+
+	public double getThirdTri() {
+		return thirdTri;
+	}
+
+	public void setThirdTri(double thirdTri) {
+		this.thirdTri = thirdTri;
+	}
+
+}
