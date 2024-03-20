@@ -1,11 +1,22 @@
 package services;
 
+import entities.Account;
 import entities.Triangle;
 
 public class Show {
-	public void showTheAreaAndPerimeterOfTheTriangle(Triangle triangle) {
+	public static void showTheAreaAndPerimeterOfTheTriangle(Triangle triangle) {
 		System.out.printf("Perimeter %s: %.3f%n", triangle.getCode(), triangle.perimeter);
 		System.out.printf("Area %s: %.3f%n", triangle.getCode(), triangle.area);
 		System.out.println();
+	}
+
+	public static void showAccountData(Account account) {
+		if (account.getNumbersDeposit() == 0) {
+			System.out.printf("Account data:%nAccount %d, Holder: %s, Balance: $ %.2f%n", account.getId(),
+					account.getHolder(), account.getBalance());
+		} else {
+			System.out.printf("Updated account data:%nAccount %d, Holder: %s, Balance: $ %.2f%n", account.getId(),
+					account.getHolder(), account.getBalance());
+		}
 	}
 }

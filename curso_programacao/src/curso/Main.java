@@ -3,6 +3,7 @@ package curso;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Account;
 import entities.Triangle;
 import services.CurrencyConverter;
 import services.Show;
@@ -10,13 +11,14 @@ import services.Show;
 public class Main {
 
 	public static void main(String[] args) {
-//		atividadesI();
+//		atividadeI();
 //		atividadeII();
 //		atividadeIII();
-		atividadeVI();
+//		atividadeVI();
+		atividadeV();
 	}
 
-	public static void atividadesI() {
+	public static void atividadeI() {
 		String product1 = "Computer";
 		String product2 = "Office Desk";
 
@@ -61,8 +63,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		Triangle x = new Triangle();
 		Triangle y = new Triangle();
-		Show show = new Show();
-
+		
 		x.setCode("X");
 		y.setCode("Y");
 
@@ -80,8 +81,8 @@ public class Main {
 		y.calculatePerimeter();
 		x.calculateAreaOfTheTriangle();
 		y.calculateAreaOfTheTriangle();
-		show.showTheAreaAndPerimeterOfTheTriangle(x);
-		show.showTheAreaAndPerimeterOfTheTriangle(y);
+		Show.showTheAreaAndPerimeterOfTheTriangle(x);
+		Show.showTheAreaAndPerimeterOfTheTriangle(y);
 		sc.close();
 	}
 
@@ -100,5 +101,33 @@ public class Main {
 		
 		System.out.printf("Amount to be paid in reais: %.2f%n", totalValue);
 		
+	}
+	
+	public static void atividadeV() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter account number: ");
+		int id = sc.nextInt();
+		
+		System.out.println("Enter account holder: ");
+		String holder = sc.next();
+		
+		Account acc = new Account(id, holder);
+
+		System.out.println("Is there an initial deposit? (1-Yes) (2-No)");
+		int option = sc.nextInt();
+		
+		if (option == 1) {
+			System.out.println("Enter initial deposit value: ");
+			acc.deposit(sc.nextDouble(), acc);
+		}
+		
+		System.out.println("Enter a deposit value: ");
+		acc.deposit(sc.nextDouble(), acc);
+		
+		System.out.println("Enter a withdraw value: ");
+		acc.withdraw(sc.nextDouble(), acc);
+		
+		sc.close();
 	}
 }

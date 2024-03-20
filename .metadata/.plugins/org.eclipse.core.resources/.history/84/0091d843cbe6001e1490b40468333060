@@ -1,0 +1,47 @@
+package entities;
+
+import services.Show;
+
+public class Account {
+	private static final double TAX = 5.0;
+	private int id;
+	private String holder;
+	private double balance;
+	private int numbersDeposit;
+	
+	public Account(int id, String holder) {
+		this.id = id;
+		this.holder = holder;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getHolder() {
+		return holder;
+	}
+	
+	public void setHolder(String holder) {
+		this.holder = holder;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	public int getNumbersDeposit() {
+		return numbersDeposit;
+	}
+	
+	public void deposit(double deposit, Account acc) {
+		balance += deposit;
+		Show.showAccountData(acc);
+		numbersDeposit++;
+	}
+	
+	public void withdraw(double withdraw, Account acc) {
+		balance -= withdraw - TAX;
+		Show.showAccountData(acc);
+	}
+}
