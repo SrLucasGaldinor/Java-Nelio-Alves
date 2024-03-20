@@ -122,6 +122,8 @@ public class Main {
 			acc.deposit(sc.nextDouble(), acc);
 		}
 		
+		Show.showAccountData(acc);
+		
 		System.out.println("Enter a deposit value: ");
 		acc.deposit(sc.nextDouble(), acc);
 		

@@ -50,19 +50,9 @@ public class Account {
 
 	public boolean validationWithdraw(Account acc, double withdraw) {
 		if (acc.getBalance() < withdraw + TAX) {
-			System.out.printf(
-					"Your balance is insufficient... There are $ %.2f in your account.%nThe bank requires a fee of $ %.2f",
-					acc.getBalance(), TAX);
+			System.out.printf("Your balance is insufficient... There are $ %.2f in your account.%nThe bank requires a fee of $ %.2f", acc.getBalance(), TAX);
 			return false;
 		}
 		return true;
 	}
-
-	public String toString() {
-		return "Account data: Account" + id + ", Holder: " + holder + ", Balance: $ " + String.format("%.2f", balance);
-	} 
-	
-	public String toStringUpdated() {
-		return "Updated account data: Account" + id + ", Holder: " + holder + ", Balance: $ " + String.format("%.2f", balance);
-	} 
 }

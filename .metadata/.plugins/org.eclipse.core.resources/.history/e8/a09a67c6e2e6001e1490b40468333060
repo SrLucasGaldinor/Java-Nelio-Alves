@@ -12,9 +12,11 @@ public class Show {
 
 	public static void showAccountData(Account account) {
 		if (account.getNumbersDeposit() == 0) {
-			System.out.printf(account.toString());
+			System.out.printf("Account data:%nAccount %d, Holder: %s, Balance: $ %.2f%n", account.getId(),
+					account.getHolder(), account.getBalance());
 		} else {
-			System.out.printf(account.toStringUpdated());
+			System.out.printf("Updated account data:%nAccount %d, Holder: %s, Balance: $ %.2f%n", account.getId(),
+					account.getHolder(), account.getBalance());
 		}
 	}
 }

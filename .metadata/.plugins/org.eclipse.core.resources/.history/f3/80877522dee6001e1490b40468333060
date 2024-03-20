@@ -128,7 +128,6 @@ public class Main {
 		System.out.println("Enter a withdraw value: ");
 		acc.withdraw(sc.nextDouble(), acc);
 		
-		System.out.printf("Deposit numbers made: %d", acc.getNumbersDeposit());
 		sc.close();
 	}
 }
